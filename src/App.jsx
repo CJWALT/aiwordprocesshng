@@ -9,7 +9,7 @@ import {
   Button,
   Error,
   Select,
-} from "./components/StyledComponents";
+} from './components/StyledComponents';
 import Message from "./components/Message";
 import toast, { Toaster } from "react-hot-toast";
 import {
