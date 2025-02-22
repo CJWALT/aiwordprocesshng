@@ -15,12 +15,12 @@ const GlobalStyles = createGlobalStyle`
   padding: 0;
   margin: 0;
 
-  /* Creating animations for dark mode */
+  
   transition: background-color 0.3s, border 0.3s;
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 16px;
 }
 
 body {
@@ -50,8 +50,8 @@ button {
 
 select:disabled,
 input:disabled {
-  background-color:#9ca3af;
-  color:#9ca3af;
+  background-color:white;
+  color:black;
 }
 
 input:focus,

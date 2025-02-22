@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   margin: 0 auto;
   padding: 20px;
-  background: #333;
+  background: gray;
   font-family: Arial, sans-serif;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -17,35 +17,46 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 22px;
-  color: #fff;
+  font-size: 32px;
+  color: black;
   text-align: center;
   margin-bottom: 20px;
+  color:white;
 
   @media (max-width: 768px) {
-    font-size: 18px;
+    font-size: 17px;
   }
 `;
 
 export const ChatContainer = styled.div`
   flex: 1;
   overflow-y: auto;
-  padding: 10px;
-  border: 1px solid #444;
-  border-radius: 8px;
-  background: #222;
+  padding: 20px;
+  display:flex;
+  background: #199;
+  position:relative;
+  flex-direction:column;
 
   @media (max-width: 768px) {
-    padding: 5px;
+    padding: 8px;
   }
 `;
 
+export const ChatContainerWrap = styled.div`
+    padding:20px;
+    border-radius:10px;
+    flex:1;
+    background:#D4F1C5;
+`
+
 export const Message = styled.div`
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   padding: 10px;
-  border-radius: 8px;
-  background: ${(props) => (props.isUser ? "#007bff" : "#555")};
-  color: ${(props) => (props.isUser ? "white" : "white")};
+  padding-left:20px;
+  border-radius: 30px;
+  border:1px solid gray;
+  background: ${(props) => (props.isUser ? "white" : "transparent")};
+  color: ${(props) => (props.isUser ? "black" : "black")};
   align-self: ${(props) => (props.isUser ? "flex-end" : "flex-start")};
   max-width: 70%;
   margin-left: ${(props) => (props.isUser ? "auto" : "0")};
@@ -53,12 +64,14 @@ export const Message = styled.div`
   @media (max-width: 768px) {
     max-width: 90%;
     padding: 8px;
+    padding-left:15px;
   }
 `;
 
 export const InputContainer = styled.div`
   display: flex;
   margin-top: 10px;
+  position:relative;
   align-items: center;
 
   @media (max-width: 768px) {
@@ -70,11 +83,11 @@ export const TextArea = styled.textarea`
   flex: 1;
   height: 60px;
   padding: 10px;
-  border: 1px solid #444;
-  border-radius: 5px;
+  
+  border-radius: 15px;
   font-size: 14px;
   resize: none;
-  background: #222;
+  background: #63A7B0;
   color: #fff;
 
   @media (max-width: 768px) {
@@ -88,8 +101,14 @@ export const Button = styled.button`
   padding: 12px;
   background: #007bff;
   color: white;
+  position:absolute;
+//   top:0; 
+  right:15px;
+  bottom:5px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
+  display:flex; 
+  justify-content:center;
   cursor: pointer;
   margin-left: 10px;
   font-size: 16px;
@@ -99,10 +118,13 @@ export const Button = styled.button`
     cursor: not-allowed;
   }
 
+  &:hover{ 
+  border:1px solid green;
+  background-color:transparent;
+  }
   @media (max-width: 768px) {
-    margin-left: 0;
-    margin-top: 10px;
-    width: 100%;
+    
+    width: 10%;
   }
 `;
 
@@ -127,6 +149,6 @@ export const Select = styled.select`
   @media (max-width: 768px) {
     margin-left: 0;
     margin-top: 10px;
-    width: 100%;
+    width: 80%;
   }
 `;
