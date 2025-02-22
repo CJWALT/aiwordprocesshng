@@ -71,9 +71,20 @@ export const Message = styled.div`
 
 export const SelectWrap = styled.div`
     display:flex; 
-    justify-content:center;
+    justify-content:space-between;
     align-items:center
+    
 
+`
+
+export const ButtonSelect = styled.div`
+    width:6%;
+    display:flex; 
+    justify-content:center;
+    cursor:pointer;
+    padding:10px; 
+    background:#63A7B0;
+    border-radius:20px;
 `
 
 export const InputContainer = styled.div`
