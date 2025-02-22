@@ -28,6 +28,14 @@ export const Title = styled.h2`
   }
 `;
 
+export const Para = styled.p`
+    font-size:10px;
+    text-align:center;
+    font-weight:normal;
+    margin-bottom:10px;
+
+`
+
 export const ChatContainer = styled.div`
   flex: 1;
   overflow-y: auto;
@@ -133,7 +141,7 @@ export const Button = styled.button`
   justify-content:center;
   cursor: pointer;
   margin-left: 10px;
-  width:6%;
+  width:15%;
   font-size: 16px;
 
   &:disabled {
@@ -145,10 +153,14 @@ export const Button = styled.button`
   border:1px solid green;
   background-color:transparent;
   }
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     
     width: 10%;
   }
+    @media (min-width:320px){
+    width:15%;
+    max-width:49px;
+    }
 `;
 
 export const Error = styled.p`

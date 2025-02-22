@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   Container,
   Title,
+  Para,
   ChatContainer,
   ChatContainerWrap,
   InputContainer,
@@ -59,7 +60,7 @@ const App = () => {
     if (userText === "") return dispatch(setError("Please enter some text"));
     if (userText.length < 1)
       return dispatch(setError("Please enter a valid text"));
-    dispatch(clearError()); // Clear previous errors
+    dispatch(clearError())
     const userMessage = userText;
     dispatch(addMessage({ text: userMessage, isUser: true }));
     textRef.current.value = "";
@@ -127,6 +128,7 @@ const App = () => {
     <Container>
       <Toaster />
       <Title>AI Word Processing Interface</Title>
+      <Para>The AI Word Processing Interface is a revolutionary tool designed to enhance document creation, editing, and formatting with intelligent automation. </Para>
       
       <ChatContainer ref={chatContainerRef}>
         <ChatContainerWrap>
