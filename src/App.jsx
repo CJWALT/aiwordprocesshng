@@ -12,6 +12,7 @@ import {
   Error,
   Select,
   SelectWrap,
+  ButtonSummarize,
   ButtonSelect,
 } from './components/StyledComponents';
 import Message from "./components/Message";
@@ -165,8 +166,13 @@ const App = () => {
             <ButtonSelect onClick={translateText} disabled={loading}>
               {loading ? "Loading..." : <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"></path><path d="M5 15V17C5 18.0544 5.81588 18.9182 6.85074 18.9945L7 19H10V21H7C4.79086 21 3 19.2091 3 17V15H5ZM18 10L22.4 21H20.245L19.044 18H14.954L13.755 21H11.601L16 10H18ZM17 12.8852L15.753 16H18.245L17 12.8852ZM8 2V4H12V11H8V14H6V11H2V4H6V2H8ZM17 3C19.2091 3 21 4.79086 21 7V9H19V7C19 5.89543 18.1046 5 17 5H14V3H17ZM6 6H4V9H6V6ZM10 6H8V9H10V6Z"></path></svg>}
             </ButtonSelect>
+            {lastMessage?.length > 150 && detectedLanguage === 'en' && <ButtonSummarize onClick={summarizeText} disabled={loading}>
+          {loading ? "Loading..." : "Summarize"}
+        </ButtonSummarize>}
           </SelectWrap>
         )}
+
+
       </ChatContainer>
       
       
@@ -176,9 +182,7 @@ const App = () => {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"></path><path d="M21.7267 2.95694L16.2734 22.0432C16.1225 22.5716 15.7979 22.5956 15.5563 22.1126L11 13L1.9229 9.36919C1.41322 9.16532 1.41953 8.86022 1.95695 8.68108L21.0432 2.31901C21.5716 2.14285 21.8747 2.43866 21.7267 2.95694ZM19.0353 5.09647L6.81221 9.17085L12.4488 11.4255L15.4895 17.5068L19.0353 5.09647Z"></path></svg>
         </Button>
        
-        {lastMessage?.length > 150 && detectedLanguage === 'en' && <Button onClick={summarizeText} disabled={loading}>
-          {loading ? "Loading..." : "Summarize"}
-        </Button>}
+        
       </InputContainer>
       {error && <Error>{error}</Error>}
     </Container>

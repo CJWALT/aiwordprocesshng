@@ -87,7 +87,7 @@ export const SelectWrap = styled.div`
     gap:20px;
     align-items:center;
     width:20rem;
-    max-width:250px;
+    max-width:300px;
         
 `
 
@@ -128,6 +128,7 @@ export const TextArea = styled.textarea`
   flex: 1;
   height: 60px;
   padding: 10px;
+  padding-right:60px;
   border-radius: 15px;
   font-size: 14px;
   resize: none;
@@ -186,6 +187,16 @@ export const Error = styled.p`
     font-size: 12px;
   }
 `;
+
+export const ButtonSummarize = styled.button `
+     
+    // width:90px;
+    border-radius:50px;
+    font-size:15px;
+    padding:10px;
+    background:transparent;
+    
+`
 
 export const Select = styled.select`
   margin-left: 10px;
