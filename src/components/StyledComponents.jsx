@@ -35,6 +35,7 @@ export const ChatContainer = styled.div`
   display:flex;
   background: #199;
   position:relative;
+  gap:20px;
   flex-direction:column;
 
   @media (max-width: 768px) {
@@ -111,6 +112,7 @@ export const Button = styled.button`
   justify-content:center;
   cursor: pointer;
   margin-left: 10px;
+  width:6%;
   font-size: 16px;
 
   &:disabled {
@@ -144,6 +146,7 @@ export const Select = styled.select`
   border-radius: 5px;
   background: #222;
   color: #fff;
+  width:85%;
   border: 1px solid #444;
 
   @media (max-width: 768px) {
