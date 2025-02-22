@@ -93,6 +93,15 @@ export const ButtonSelect = styled.div`
     padding:10px; 
     background:#63A7B0;
     border-radius:20px;
+
+    @media (min-width: 768px) {
+    
+    width: 10%;
+  }
+    @media (min-width:320px){
+    width:15%;
+    max-width:49px;
+    }
 `
 
 export const InputContainer = styled.div`
