@@ -69,11 +69,21 @@ export const Message = styled.div`
   }
 `;
 
+export const SelectWrap = styled.div`
+    display:flex; 
+    justify-content:center;
+    align-items:center
+
+`
+
 export const InputContainer = styled.div`
   display: flex;
   margin-top: 10px;
   position:relative;
   align-items: center;
+  display:flex; 
+  flex-direction:row;
+  gap:20px;
 
   @media (max-width: 768px) {
     flex-direction: column;
