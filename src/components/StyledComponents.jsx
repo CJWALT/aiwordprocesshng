@@ -23,8 +23,8 @@ export const Title = styled.h2`
   margin-bottom: 20px;
   color:white;
 
-  @media (max-width: 768px) {
-    font-size: 17px;
+  @media (min-width: 768px) {
+    font-size: 20px;
   }
 `;
 
@@ -33,6 +33,10 @@ export const Para = styled.p`
     text-align:center;
     font-weight:normal;
     margin-bottom:10px;
+
+    @media (max-width: 768px) {
+    font-size:16px;
+  }
 
 `
 
@@ -61,6 +65,7 @@ export const ChatContainerWrap = styled.div`
 export const Message = styled.div`
   margin-bottom: 30px;
   padding: 10px;
+  overflow:hidden;
   padding-left:20px;
   border-radius: 30px;
   border:1px solid gray;
@@ -79,10 +84,11 @@ export const Message = styled.div`
 
 export const SelectWrap = styled.div`
     display:flex; 
-    justify-content:space-between;
-    align-items:center
-    
-
+    gap:20px;
+    align-items:center;
+    width:20rem;
+    max-width:250px;
+        
 `
 
 export const ButtonSelect = styled.div`
@@ -98,7 +104,7 @@ export const ButtonSelect = styled.div`
     
     width: 10%;
   }
-    @media (min-width:320px){
+    @media (min-width:290px){
     width:15%;
     max-width:49px;
     }
@@ -122,7 +128,6 @@ export const TextArea = styled.textarea`
   flex: 1;
   height: 60px;
   padding: 10px;
-  
   border-radius: 15px;
   font-size: 14px;
   resize: none;
@@ -185,15 +190,18 @@ export const Error = styled.p`
 export const Select = styled.select`
   margin-left: 10px;
   padding: 10px;
-  border-radius: 5px;
-  background: #222;
+  border-radius: 20px;
+  background: transparent;
+  
   color: #fff;
-  width:85%;
+  width:50%;
+//   max-width:150px;
   border: 1px solid #444;
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     margin-left: 0;
     margin-top: 10px;
     width: 80%;
+    
   }
 `;
